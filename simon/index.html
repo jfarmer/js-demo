@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simon</title>
+
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <section id="content">
+      <h1>Simon</h1>
+
+      <div class="simon-container">
+        <div id="green" class="simon-button green"></div>
+        <div id="red" class="simon-button red"></div>
+        <div id="yellow" class="simon-button yellow"></div>
+        <div id="blue" class="simon-button blue"></div>
+      </div>
+      <div class="simon-controls">
+        <strong>Hey! Listen!</strong> — Press the keys: <code>T</code>, <code>Y</code>, <code>G</code>, <code>H</code>
+      </div>
+      <div class="simon-controls">
+        <div>
+          <label for="chord">Chord</label>
+          <select id="chord">
+            <option>major</option>
+            <option>minor</option>
+            <option>diminished</option>
+            <option>sus2</option>
+          </select>
+        </div>
+        <div>
+          <label for="waveform">Waveform</label>
+          <select id="waveform">
+            <option>sawtooth</option>
+            <option>square</option>
+            <option>sine</option>
+            <option>triangle</option>
+          </select>
+        </div>
+        <button id="simon-start">Start</button>
+      </div>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous">
+    </script>
+
+    <script src="notes.js"></script>
+    <script src="simon.js"></script>
+    <script src="buttons.js"></script>
+  </body>
+</html>
