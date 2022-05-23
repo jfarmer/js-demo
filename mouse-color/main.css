@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+
+  -webkit-text-stroke: 1px black;
+  /* transition the changes in background-color to
+     avoid a strobe-like effect. move mouse slowly
+     to see every intermediate color. */
+  transition: background-color 100ms linear;
+}
+
+header {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-size: 48px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+}

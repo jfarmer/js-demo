@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    #color-square {
+      height: 200px;
+      width: 200px;
+      background-color: rgb(255, 0, 0);
+    }
+
+    .color-buttons {
+      margin-top: 40px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="color-square">
+    &nbsp;
+  </div>
+  <div class="color-buttons">
+    <button id="make-red-btn">Red</button>
+    <button id="make-green-btn">Green</button>
+    <button id="make-blue-btn">Blue</button>
+  </div>
+  <div class="color-buttons">
+    <input id="color-input" type="text" placeholder="Enter a color" />
+    <button id="set-color">Set color</button>
+    <p>
+      Enter a valid <code>background-color</code> value in the text input and then
+      click the <strong>Set Color</strong> button. Examples:
+    </p>
+    <ul>
+      <li>
+        <code>purple</code>
+      </li>
+      <li>
+        <code>rgb(0, 180, 90)</code>
+      </li>
+      <li>
+        <code>#FFFF00</code>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    let redButton = document.querySelector("#make-red-btn");
+    redButton.addEventListener("click", function () {
+      console.log("Clicking red button");
+
+      let colorSquare = document.querySelector("#color-square");
+      colorSquare.style["background-color"] = "red";
+    });
+
+    let greenButton = document.querySelector("#make-green-btn");
+    greenButton.addEventListener("click", function () {
+      console.log("Clicking green button");
+      let colorSquare = document.querySelector("#color-square");
+
+      colorSquare.style["background-color"] = "green";
+    });
+
+    let blueButton = document.querySelector("#make-blue-btn");
+    blueButton.addEventListener("click", function () {
+      console.log("Clicking blue button");
+
+      let colorSquare = document.querySelector("#color-square");
+
+      colorSquare.style["background-color"] = "blue";
+    });
+
+    let setColorButton = document.querySelector("#set-color");
+
+    setColorButton.addEventListener("click", function () {
+      let colorInput = document.querySelector("#color-input");
+
+      let colorSquare = document.querySelector("#color-square");
+
+      colorSquare.style["background-color"] = colorInput.value;
+    });
+  </script>
+</body>
+
+</html>
